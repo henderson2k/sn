@@ -1,2 +1,2 @@
-window.open("https://www.google.co.uk", "_blank");
+window.open("https://www.bbc.co.uk", "_blank");
 // test
