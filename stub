@@ -61,7 +61,7 @@ console.log("nothing!")
 description1 = JSON.stringify(description1)
  //     localStorage.setItem("description", description1);
   
- description0 = description1.replace("%","PERCENT");        
+ description0 = description1.replace(/%/g,"PERCENT");        
 
 description2 = description0.substring(0, 1500)
 //description2 = description2.replace("%","PERC")
