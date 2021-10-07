@@ -1,2 +1,2 @@
-window.open("https://www.duckduckgo.com", "_blank");
+window.open("https://www.google.com", "_blank");
 // test
