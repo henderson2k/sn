@@ -64,7 +64,8 @@ description1 = JSON.stringify(description1)
         
 
 description2 = description1.substring(0, 1500)
-description2 = description2.replace("%","PERC")
+//description2 = description2.replace("%","PERC")
+description2 = description2 .replace(/[^\w\s]/gi, '')
 
 casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + "," + location1 + "," + contactnumber1 + "," + description1
 console.log(casearray)
