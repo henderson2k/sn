@@ -22,7 +22,8 @@ function main() {
             return doc.getElementById(id);
         };
     } else {
-        console.log("Not an Incident or RITM")
+      console.log("not ServiceNow");
+       return;
     }
 
     if (url.indexOf('incident') > 1) {
@@ -45,7 +46,10 @@ function main() {
         x = $('sc_req_item.description');if (x) {description1 = x.value};
         x = $('document_tags');if (x) {sysid1 = x.getAttribute("data-sys_id")};
 
-    } else {}
+    } else {
+       console.log("Not an Incident or RITM")
+       return;
+    }
 
     
   //  console.log(casenumber1);
