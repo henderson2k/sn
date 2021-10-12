@@ -60,9 +60,9 @@ function main() {
  //     localStorage.setItem("description", description1);
   
  description0 = description1.replace(/%/g," PERCENT");        
- description0 = description1.replace(/&/g,"AND");  
+ description0 = description1.replace(/&/g," AND");  
 
- 
+
 description2 = description0.substring(0, 1500)
 //description2 = description2.replace("%","PERC")
 //description2 = description2.replace(/[^\w\s]/gi, '')
