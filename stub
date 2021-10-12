@@ -6,10 +6,10 @@ var clipbo = ""
 url = window.location.href
 //get the current browser url
 
-main()
-//setTimeout(function() {
-//    main()
-//}, 2000);
+//main()
+setTimeout(function() {
+    main()
+}, 2000);
 
 function main() {
 
@@ -22,7 +22,7 @@ function main() {
             return doc.getElementById(id);
         };
     } else {
-        console.log("end")
+        console.log("Not an Incident or RITM")
     }
 
     if (url.indexOf('incident') > 1) {
@@ -48,28 +48,23 @@ function main() {
     } else {}
 
     
-    console.log(casenumber1);
-    console.log(caller1);
-    console.log(location1);
-    console.log(contactnumber1);
-    console.log(asset1);
-    console.log(description1);
-    console.log(sysid1);
+  //  console.log(casenumber1);
+  //  console.log(caller1);
+  //  console.log(location1);
+  //  console.log(contactnumber1);
+  //  console.log(asset1);
+  //  console.log(description1);
+  //  console.log(sysid1);
 
-    description1 = JSON.stringify(description1)
- //     localStorage.setItem("description", description1);
+  //  description1 = JSON.stringify(description1)
+ //   localStorage.setItem("description", description1);
   
- description0 = description1.replace(/%/g," PERCENT");        
- //description0 = description1.replace(/&/g," AND");  
+description1 = description1.replace(/[\n]/g, '<br>'); 
+description1 = description1.replace(/%/g,"PERCENT");   
+description1 = description1.substring(0, 1500);
 
-
-description2 = description0.substring(0, 1500)
-//description2 = description2.replace("%","PERC")
-//description2 = description2.replace(/[^\w\s]/gi, '')
-//description2 = description2.replace(/%/g,"PERCENT");
-
-casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + "," + location1 + "," + contactnumber1 + "," + description2
-console.log(casearray)
+casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + "," + location1 + "," + contactnumber1 + "," + description1
+//console.log(casearray)
 setTimeout(async()=>{ clipbo = await navigator.clipboard.readText();window.open(hosturl + clipbo + "," + casearray, '_blank')}, 200)
 
 }
