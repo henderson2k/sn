@@ -1,0 +1,3 @@
+txt = "Hi Elizabeth, thanks for the update. Yes, Alison should be able to use everything as normal, while connected via Secure Remote Access (soft token). The only requirement from Alison is that she log into the Laptop for the first time while onsite (with a wired network cable), this is to download her profile onto the Laptop, then she can log in anywhere. The IT Store is located in the small courtyard (just down from the main Kirklands reception) and is open between 9am – 11am then again from 2pm-4pm. - Alison would require to bring her pass as ID to collect the Laptop."
+
+  navigator.clipboard.writeText(txt);
