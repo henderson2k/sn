@@ -1,6 +1,6 @@
 # Mermaid Test
 
-    ```mermaid 
+    mermaid 
     graph TD
       id1[A] --> id2[B]
       id2[B] --> id3[C]
