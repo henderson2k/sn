@@ -5,5 +5,5 @@ HI2
 ```mermaid
 flowchart
 A <-- 123 --> B
-C --> aA D
+C --> A D
 ```
