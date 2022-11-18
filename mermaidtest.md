@@ -4,5 +4,5 @@ HI2
 
 ```mermaid
 flowchart
-A -- 123 -> B
+A -- 123 --> B
 ```
