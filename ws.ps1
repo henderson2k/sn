@@ -27,8 +27,8 @@ $httpResponse.ContentLength64 = $buffer.length
 $httpResponse.OutputStream.Write($buffer, 0, $buffer.length)
 # Read-Host -Prompt "Press Enter to exit"
 # close and stop http response and listener
-$httpResponse.Close()
-$htmlListener.Stop()
+# $httpResponse.Close()
+# $htmlListener.Stop()
 
 }
 catch
