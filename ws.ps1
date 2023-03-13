@@ -1,38 +1,63 @@
-# html url
-$url = 'http://localhost:8080/'
+$listenerPort = "8007"
+$ServerThreadCode = {
+  $listenerPort = $args[0]
+  $listener = New-Object System.Net.HttpListener
+  $listenerString = "http://+:$listenerPort/"
+  $listener.Prefixes.Add($listenerString)
+ 
+  $listener.Start()
+ 
+  while ($listener.IsListening) {
+ 
+    $context = $listener.GetContext() # blocks until request is received
+    $request = $context.Request
+    $response = $context.Response
+    $message = "Bad boys, bad boys whatcha gonna do? `nWhatcha gonna do when they come for you?`n"
 
-# html code
-$html = @"    
-<!DOCTYPE html> <html> <body>
-<h1>PowerShell Web Server</h1>
-<p>Example Web Server with Http Listener from github</p>
-</body> </html>
-"@
+    # Show Url Path and Query in the response.
+    $path = $context.Request.Url.LocalPath.ToString()
+    $query = $context.Request.Url.Query.ToString()
+    if ($path){$message += "`nPath: " + $path}
+    if ($query){$message += "`nQuery: " + $query}
 
-try
-{
-    
-# start basic web server
-$htmlListener = New-Object System.Net.HttpListener
-$htmlListener.Prefixes.Add($url)
-$htmlListener.Start()
+    # This will terminate the script. Remove from production!
+    if ($request.Url -match '/end$') { break }
 
-# process received html request
-$httpContext = $htmlListener.GetContext()
-$httpResponse = $httpContext.Response
-
-# return the HTML code/page to the caller
-$buffer = [Text.Encoding]::UTF8.GetBytes($html)
-$httpResponse.ContentLength64 = $buffer.length
-$httpResponse.OutputStream.Write($buffer, 0, $buffer.length)
-# Read-Host -Prompt "Press Enter to exit"
-# close and stop http response and listener
-# $httpResponse.Close()
-# $htmlListener.Stop()
-
+    [byte[]] $buffer = [System.Text.Encoding]::UTF8.GetBytes($message)
+    $response.ContentLength64 = $buffer.length
+    $response.StatusCode = 200
+    $output = $response.OutputStream
+    $output.Write($buffer, 0, $buffer.length)
+    $output.Close()
+  }
+ 
+  $listener.Stop()
 }
-catch
+  
+$serverJob = Start-Job $ServerThreadCode -ArgumentList $listenerPort
+Write-Host "Listening on $listenerPort ..."
+Write-Host "Try me: Invoke-WebRequest 'http://localhost:$listenerPort/hello?world'"
+Write-Host "Press Ctrl+X to terminate" 
+ 
+[console]::TreatControlCAsInput = $true
+
+# Wait for it all to complete
+while ($serverJob.State -eq "Running")
 {
-    Write-Error $_.Exception.ToString()
-    Read-Host -Prompt "The above error occurred. Press Enter to exit."
+  if ([console]::KeyAvailable) {
+    $key = [system.console]::readkey($true)
+    if (($key.modifiers -band [consolemodifiers]"control") -and ($key.key -eq "X"))
+    {
+      Write-Host "Terminating. Please Wait.."
+      try { $result = Invoke-WebRequest -Uri "http://localhost:$listenerPort/end" -TimeoutSec 3 } catch { Write-Host "Listener ended" }
+      $serverJob | Stop-Job 
+      Remove-Job $serverJob
+      break
+    }
+  }
+
+  Start-Sleep -s 1
 }
+ 
+# Getting the information back from the jobs
+Get-Job | Receive-Job
