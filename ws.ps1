@@ -9,6 +9,9 @@ $html = @"
 </body> </html>
 "@
 
+try
+{
+    
 # start basic web server
 $htmlListener = New-Object System.Net.HttpListener
 $htmlListener.Prefixes.Add($url)
@@ -22,7 +25,14 @@ $httpResponse = $httpContext.Response
 $buffer = [Text.Encoding]::UTF8.GetBytes($html)
 $httpResponse.ContentLength64 = $buffer.length
 $httpResponse.OutputStream.Write($buffer, 0, $buffer.length)
-Read-Host -Prompt "Press Enter to exit"
+# Read-Host -Prompt "Press Enter to exit"
 # close and stop http response and listener
 $httpResponse.Close()
 $htmlListener.Stop()
+
+}
+catch
+{
+    Write-Error $_.Exception.ToString()
+    Read-Host -Prompt "The above error occurred. Press Enter to exit."
+}
