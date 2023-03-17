@@ -1,0 +1,9 @@
+Full page email compose urls
+
+gMail (supports pasted Tel: hrefs)
+
+https://mail.google.com/mail/?view=cm&fs=1&to=someone@example.com&su=SUBJECT&body=%3Cb%3Ehi%3C%2Fb%3E&bcc=someone.else@example.com
+
+Outlook (works without the 365 at the end of office365.com)
+
+https://outlook.office.com/mail/deeplink/compose?to=andrew.henderson2@lanarkshire.scot.nhs.uk&subject=SN:%20Case&body=body%20text
