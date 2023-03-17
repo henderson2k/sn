@@ -1,3 +1,0 @@
-txt = "The IT Store is located in the small courtyard (just down from the main Kirklands reception) and is open between 9am–11am then again from 2pm-4pm. Please bring ID (your Pass), when collecting."
-
-  navigator.clipboard.writeText(txt);
