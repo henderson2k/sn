@@ -47,7 +47,7 @@ function main() {
         x = $('document_tags');if (x) {sysid1 = x.getAttribute("data-sys_id")};
 
     } else {
-       console.log("Not an Incident or RITM")
+       console.log("Not an Incident or Request")
        return;
     }
 
