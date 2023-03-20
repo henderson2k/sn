@@ -32,7 +32,6 @@ function main() {
         x = $('sys_display.sc_req_item.u_device_tag');if (x) {asset1 = x.value};
         x = $('sc_req_item.description');if (x) {description1 = x.value};
         x = $('document_tags');if (x) {sysid1 = x.getAttribute("data-sys_id")};
-
     } else {
        console.log("Not an Incident or Request")
        return;
