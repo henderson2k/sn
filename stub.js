@@ -17,7 +17,6 @@ function main() {
     }
 
     if (url.indexOf('incident.do') > 1) {
-
         x = $('sys_readonly.incident.number');if (x) {casenumber1 = x.value};
         x = $('sys_display.incident.caller_id');if (x) {caller1 = x.value};
         x = $('sys_display.incident.location');if (x) {location1 = x.value};
