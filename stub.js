@@ -49,5 +49,4 @@ description1 = description1.substring(0, 1500);
 casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + "," + location1 + "," + contactnumber1 + "," + description1
 
 setTimeout(async()=>{ window.open(hosturl + asset1 + "," + casearray, '_blank')}, 500)
-
 }
