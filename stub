@@ -1,7 +1,6 @@
 var hosturl = 'http://m07092:80/'
 
 url = window.location.href
-//get the current browser url
 
 main()
 //setTimeout(function() {
