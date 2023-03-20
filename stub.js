@@ -25,6 +25,7 @@ function main() {
         x = $('incident.description');if (x) {description1 = x.value};
         x = $('document_tags');if (x) {sysid1 = x.getAttribute("data-sys_id")};
     } else if (url.indexOf('sc_req_item') > 1) {
+
         x = $('sys_displayValue');if (x) {casenumber1 = x.value};
         x = $('sc_req_item.request.requested_for_label');if (x) {caller1 = x.value};
         x = $('sys_display.sc_req_item.u_location');if (x) {location1 = x.value};
