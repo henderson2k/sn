@@ -42,7 +42,6 @@ function main() {
        return;
     }
 
-    
 description1 = description1.replace(/[\n]/g, '<br>'); 
 description1 = description1.replace(/%/g,"PERCENT");   
 description1 = description1.substring(0, 1500);
