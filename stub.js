@@ -5,7 +5,6 @@ url = window.location.href
 main()
 
 function main() {
-
     if (url.indexOf('nhsscotland.service-now.com/') > 0) {
         var ifrm = document.getElementById('gsft_main')
         var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
