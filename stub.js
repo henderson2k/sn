@@ -3,9 +3,6 @@ var hosturl = 'http://m07092:80/'
 url = window.location.href
 
 main()
-//setTimeout(function() {
-//    main()
-//}, 2000);
 
 function main() {
 
