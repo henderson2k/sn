@@ -1,4 +1,4 @@
-var hosturl = 'http://local80/'
+var hosturl = 'http://localhost:80/'
 //var hosturl = 'http://m10874:80/'
 //var hosturl = 'http://m07092:80/'
 
