@@ -1,4 +1,5 @@
-var hosturl = 'http://m07092:80/'
+var hosturl = 'http://m10874:80/'
+//var hosturl = 'http://m07092:80/'
 
 url = window.location.href
 
