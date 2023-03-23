@@ -1,1 +1,1 @@
-WScript.Echo("Windows message box sample");
+console.log("message from me!");
