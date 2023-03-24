@@ -383,7 +383,7 @@ elem.execCommand("Copy");
  
 
     <div style="position: absolute; right: 0px; padding-right: 160px; padding-bottom: 20px" id="qrcode"></div>
-    <div><a>hi 
+    <div><a>hi 24/03/2023
 <script type="text/javascript">
 new QRCode(document.getElementById("qrcode"), "${callettel}");
 </script>
