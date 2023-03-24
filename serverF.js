@@ -383,6 +383,7 @@ elem.execCommand("Copy");
  
 
     <div style="position: absolute; right: 0px; padding-right: 160px; padding-bottom: 20px" id="qrcode"></div>
+    <div>
 <script type="text/javascript">
 new QRCode(document.getElementById("qrcode"), "${callettel}");
 </script>
