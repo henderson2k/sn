@@ -2,6 +2,17 @@
 // set-executionpolicy remotesigned
 //   Set-ExecutionPolicy unrestricted
 
+let objectDate = new Date();
+
+var weekday = objectDate.toLocaleString("default", { weekday: "long" })
+let day = objectDate.getDate();
+let month = objectDate.getMonth();
+let year = objectDate.getFullYear();
+
+var date1 = weekday + " " + day + "/" + month + "/" + year;
+
+
+
 const http = require('http');
 const port = process.env.PORT || 80;
 let blanc = ""
@@ -313,9 +324,7 @@ function sendEmail()
 
 
 
-
-
-   function copyDivToClipboard() {
+function copyDivToClipboard() {
                     var range = document.createRange();
                     range.selectNode(document.getElementById("foo"));
                     window.getSelection().removeAllRanges(); // clear current selection
@@ -323,7 +332,9 @@ function sendEmail()
                     document.execCommand("copy");
                     window.getSelection().removeAllRanges();// to deselect
 document.getElementById("foo").style.backgroundColor="lightgray";
+
                 }
+
 
 function changefoobackgroundback() {
 document.getElementById("foo").style.backgroundColor="white";
@@ -383,13 +394,12 @@ elem.execCommand("Copy");
  
 
     <div style="position: absolute; right: 0px; padding-right: 160px; padding-bottom: 20px" id="qrcode"></div>
-
-<a>Hello from github version  of this file2</a>
-    <script type="text/javascript">
+<script type="text/javascript">
 new QRCode(document.getElementById("qrcode"), "${callettel}");
 </script>
     </div>
     
+
    
 <!--
 <button onclick="copyDivToClipboard();">Send e-mail</div>
@@ -401,7 +411,7 @@ new QRCode(document.getElementById("qrcode"), "${callettel}");
 <input type="button" onclick="location.href='https://mail.google.com/mail/?view=cm&fs=1&to=andrew.henderson2@lanarkshire.scot.nhs.uk&su=Cases&body=','_blank';copyDivToClipboard();" value="Email" />   
 
 -->
-   <a class="btn btn-primary" onclick="copyDivToClipboard();" href="https://mail.google.com/mail/?view=cm&fs=1&to=andrew.henderson2@lanarkshire.scot.nhs.uk&su=SN: Cases&body=" target="_blank">Create Email</a>
+   <a class="btn btn-primary" onclick="copyDivToClipboard();" href="https://mail.google.com/mail/?view=cm&fs=1&to=andrew.henderson2@lanarkshire.scot.nhs.uk&su=SN: ${date1}&body=" target="_blank">Create Email</a>
        
       </body>
       <script>
