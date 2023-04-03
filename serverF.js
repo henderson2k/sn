@@ -84,7 +84,8 @@ async function getPage1() {
     caller1 = inbit[4]
     location1 = inbit[5]
     callettel = inbit[6]
-    
+    Page1.replace('${location1}',location1)
+
     
     //function getSecondPart(str) {
     //  return str.split("headquaters")[1];
