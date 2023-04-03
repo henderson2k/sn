@@ -8,7 +8,7 @@ async function getPage1() {
   const res = await fetch('https://raw.githubusercontent.com/henderson2k/sn/main/page1.html')
 
   Page1 = await res.text();
-Page1 = p
+Page1 = P
 .replace('${date1}','ANDREWSH')
 //console.log(Page1)
 }
