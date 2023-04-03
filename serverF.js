@@ -10,7 +10,7 @@ async function getPage1() {
   Page1 = await res.text();
 Page1 = Page1
 .replace('${date1}','ANDREWSH')
-console.log("update f")
+console.log("update from ASH")
 //console.log(Page1)
 }
 
