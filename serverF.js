@@ -9,7 +9,7 @@ async function getPage1() {
     
       Page1 = await res.text();
     Page1 = Page1
-    .replace('${location1}',loca)
+    .replace('${location1}',location1)
     console.log("update from ASH")
     //console.log(Page1)
     }
