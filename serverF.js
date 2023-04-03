@@ -283,8 +283,9 @@ async function getPage1() {
     // <!-- <a>${inbit}</a> -->
     // <!--   <a href=" mailto:andrew.henderson2@lanarkshire.scot.nhs.uk?cc=henderson2k@gmail.com&bcc=henderson2k+test4@gmail.com&subject=SNCaseNumber%20GOESHERE&body=Signed_by:">mailto</a> -->
     // Client side
+    Page1
+    .replace('${location1}',location1)
 
-    
       res.writeHead(200, { 'Content-Type': 'text/html' });
     
       res.end(Page1);
