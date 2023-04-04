@@ -2,7 +2,19 @@
 // set-executionpolicy remotesigned
 //   Set-ExecutionPolicy unrestricted
 
-  
+  async function getPage1() {
+    //  let obj;
+    
+      const res = await fetch('https://raw.githubusercontent.com/henderson2k/sn/main/page1.html')
+    
+      Page1 = await res.text();
+    //Page1 = obj
+    //.replace('${date1}','ANDREWSH')
+    //console.log(Page1)
+    }
+    
+    getPage1()
+    
     
     let objectDate = new Date();
     
