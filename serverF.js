@@ -2,7 +2,7 @@
 // set-executionpolicy remotesigned
 //   Set-ExecutionPolicy unrestricted
 
-async function getPage1() {
+  async function getPage1() {
     //  let obj;
     
       const res = await fetch('https://raw.githubusercontent.com/henderson2k/sn/main/page1.html')
