@@ -279,11 +279,6 @@
     // Client side
       res.writeHead(200, { 'Content-Type': 'text/html' });
     
-
-
-
-
-      
       res.end(Page1);
     });
     
