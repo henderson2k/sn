@@ -15,7 +15,7 @@ main()
 function main() {
 
     if (url.indexOf('nav_to.do') > 0) {
-        console.log()
+        console.log(sn)
 
    //   var mdl = document.getElementsByClassName('modal-body');
         var ifrm = document.getElementById('gsft_main')
