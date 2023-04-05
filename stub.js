@@ -29,10 +29,8 @@ function main() {
   //      };
    // }
 
-   var $ = function(id) {
-    //         return docdocument.getElementById(id);
-          };
 
+   
     if (url.indexOf('incident.do') > 1) {
 
         x = $('sys_readonly.incident.number');if (x) {casenumber1 = x.value};
