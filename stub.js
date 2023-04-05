@@ -7,10 +7,6 @@ url = window.location.href
 //get the current browser url
 
 main()
-//setTimeout(function() {
-//    main()
-//}, 2000);
-
 
 function main() {
 
