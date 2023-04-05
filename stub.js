@@ -4,7 +4,6 @@ asset1 = ""
 var clipbo = ""
 
 url = window.location.href
-//get the current browser url
 
 main()
 
