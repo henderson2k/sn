@@ -52,18 +52,6 @@ console.log('in inc oart')
        return;
     }
 
-    
-  //  console.log(casenumber1);
-  //  console.log(caller1);
-  //  console.log(location1);
-  //  console.log(contactnumber1);
-  //  console.log(asset1);
-  //  console.log(description1);
-  //  console.log(sysid1);
-
-  //  description1 = JSON.stringify(description1)
- //   localStorage.setItem("description", description1);
-  
 description1 = description1.replace(/[\n]/g, '<br>'); 
 description1 = description1.replace(/%/g,"PERCENT");   
 description1 = description1.substring(0, 1500);
