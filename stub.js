@@ -16,21 +16,23 @@ function main() {
 
     if (url.indexOf('nav_to.do') > 0) {
       console.log('ServiceNow full')
-
+console.log(url)
    //   var mdl = document.getElementsByClassName('modal-body');
        var ifrm = document.getElementById('gsft_main')
         var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
-        var $ = function(id) {
-            return doc.getElementById(id);
-       };
+       $ = function(id) {
+           return doc.getElementById(id);
+      };
    } else {
-       var $ = function(id) {
-          return document.getElementById(id);
-        };
+            console.log('ServiceNow inc or req page popout')
+console.log(url)
+      // var $ = function(id) {
+     //     return document.getElementById(id);
+     //   };
    }
-
+console.log('past url function')
     if (url.indexOf('incident.do') > 1) {
-
+console.log('in inc oart')
         x = $('sys_readonly.incident.number');if (x) {casenumber1 = x.value};
         //console.log("wegotacasenumber")
         x = $('sys_display.incident.caller_id');if (x) {caller1 = x.value};
@@ -74,5 +76,8 @@ description1 = description1.substring(0, 1500);
 casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + "," + location1 + "," + contactnumber1 + "," + description1
 //console.log(casearray)
 // setTimeout(async()=>{ clipbo = await navigator.clipboard.readText();window.open(hosturl + clipbo + "," + casearray, '_blank')}, 200)
-setTimeout(async()=> {clipbo = casearray}, 800)
+//setTimeout(async()=> {clipbo = casearray}, 800)
+
+
+  setTimeout(async()=>{ window.open(hosturl + asset1 + "," + casearray, '_blank')}, 500)
 }
