@@ -24,9 +24,9 @@ function main() {
             return doc.getElementById(id);
        };
    } else {
-  //      var $ = function(id) {
-  //         return docdocument.getElementById(id);
-  //      };
+       var $ = function(id) {
+          return docdocument.getElementById(id);
+        };
    // }
 
     if (url.indexOf('incident.do') > 1) {
