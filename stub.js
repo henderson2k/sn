@@ -21,7 +21,7 @@ function main() {
   //      var ifrm = document.getElementById('gsft_main')
   //      var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
   //      var $ = function(id) {
-            return doc.getElementById(id);
+  //          return doc.getElementById(id);
         };
     } else {
         var $ = function(id) {
