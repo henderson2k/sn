@@ -24,7 +24,7 @@ function main() {
   //          return doc.getElementById(id);
   //      };
   //  } else {
-        var $ = function(id) {
+  //      var $ = function(id) {
             return docdocument.getElementById(id);
         };
     }
