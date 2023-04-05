@@ -18,9 +18,9 @@ function main() {
       console.log('ServiceNow full')
 
    //   var mdl = document.getElementsByClassName('modal-body');
-  //      var ifrm = document.getElementById('gsft_main')
-  //      var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
-  //      var $ = function(id) {
+       var ifrm = document.getElementById('gsft_main')
+        var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
+        var $ = function(id) {
   //          return doc.getElementById(id);
   //      };
   //  } else {
