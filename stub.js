@@ -23,7 +23,7 @@ function main() {
   //      var $ = function(id) {
   //          return doc.getElementById(id);
   //      };
-    } else {
+  //  } else {
         var $ = function(id) {
             return docdocument.getElementById(id);
         };
