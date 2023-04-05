@@ -5,25 +5,26 @@
 
 
 async function getPage1() {
-  //  let obj;
-  
-    const res = await fetch('https://raw.githubusercontent.com/henderson2k/sn/main/page1.html')
-  
-    Page1 = await res.text();
-Page21 = Page1.replace("${location1}",location1)
-//   console.log(Page21 + "ASH-END-BIT")
-  }
-  
+  const res = await fetch('https://raw.githubusercontent.com/henderson2k/sn/main/page1.html')
+  Page1 = await res.text();
+ 
+  Page1 = Page1
+  .replace(/location1/g,location1)
+  .replace(/caseno/g,caseno)
+  .replace(/casetype/g,casetype)
+  .replace(/callertel/g,callertel)
+  .replace(/caller1/g,caller1)
+  .replace(/asset1/g,asset1)
+  .replace(/date1/,date1)
+  .replace(/description1/g,description1)
+}
 
-
-
+// get date and format it
 let objectDate = new Date();
-
 var weekday = objectDate.toLocaleString("default", { weekday: "long" })
 let day = objectDate.getDate();
 let month = objectDate.getMonth();
 let year = objectDate.getFullYear();
-
 var date1 = weekday + " " + day + "/" + month + "/" + year;
 
 
@@ -36,31 +37,31 @@ var MyApp = {}; // Globally scoped object
 const server = http.createServer(async(req, res) => {
 
 
-  // turn URL into array and name items
-  inbit = req.url    // console.log(typeof inbit)
+// turn URL into array and name items
+inbit = req.url    // console.log(typeof inbit)
 
-  if (inbit.indexOf('INC') > 0) {
+if (inbit.indexOf('INC') > 0) {
 casetype = "Incident"
-    incorritm = "nav_to.do?uri=incident.do?sys_id="}
-    else {
+  incorritm = "nav_to.do?uri=incident.do?sys_id="}
+  else {
 casetype = "Request"
-     incorritm = "nav_to.do?uri=sc_req_item.do?sys_id="
-    }
+   incorritm = "nav_to.do?uri=sc_req_item.do?sys_id="
+  }
 
-  inbit = decodeURI(inbit)
-  inbitLen = inbit.length
-  inbit = inbit.substring(1, inbitLen) 
-  inbit = inbit.split(",");
-    clipboard = inbit[0]
-    asset1 = inbit[1]
-    caseno = inbit[2]
-    caseid = inbit[3]
-    preurl = "https://nhsscotland.service-now.com/"      
-    caseurl = preurl + incorritm + caseid 
+inbit = decodeURI(inbit)
+inbitLen = inbit.length
+inbit = inbit.substring(1, inbitLen) 
+inbit = inbit.split(",");
+  clipboard = inbit[0]
+  asset1 = inbit[1]
+  caseno = inbit[2]
+  caseid = inbit[3]
+  preurl = "https://nhsscotland.service-now.com/"      
+  caseurl = preurl + incorritm + caseid 
 
 caller1 = inbit[4]
 location1 = inbit[5]
-callettel = inbit[6]
+callertel = inbit[6]
 
 description1 = "" + inbit.slice(7);
 function replaceGlobally(original, searchTxt, replaceTxt) {
@@ -82,8 +83,8 @@ return(dompart)
 }
 
 async function main() {
- let reqURL = await reqURLarray();
- return(reqURL)
+let reqURL = await reqURLarray();
+return(reqURL)
 }
 
 
@@ -100,133 +101,71 @@ const dompart1 = await someAsyncFunc(dompart);
 
 
 // Server-sent events endpoint
-   if (req.url === '/e') { // 'e' short for events
-     res.writeHead(200, {
-    'Content-Type': 'text/event-stream',
-    'Cache-Control': 'no-cache',
-    'Connection': 'keep-alive',
-      });
-  async function spawnChild() {
-         
-    var spawn = require("child_process").spawn,child;
-             child = spawn("powershell.exe",["c:\\Intel\\gs.ps1 " + dompart1]);
-  
-      for await (var data of child.stdout) {
-        ps0 = blanc += data // data to string (when combined with blanc variable)
-        ps0 = ps0.trim() //trim spaces at end of string
-        ps0 = ps0.replace(/\n/g, "\ndata:")  //reformat ps to work as sse text  
-      };
-      
-      blanc = ""  //clear blanc, so it doesn't stay in memory and get added to blanc next time this runs 
- 
-     
-      res.write('data: \ndata:' + ps0 + '\n\n')
+ if (req.url === '/e') { // 'e' short for events
+   res.writeHead(200, {
+  'Content-Type': 'text/event-stream',
+  'Cache-Control': 'no-cache',
+  'Connection': 'keep-alive',
+    });
+async function spawnChild() {
+       
+  var spawn = require("child_process").spawn,child;
+           child = spawn("powershell.exe",["c:\\Intel\\gs.ps1 " + dompart1]);
+
+    for await (var data of child.stdout) {
+      ps0 = blanc += data // data to string (when combined with blanc variable)
+      ps0 = ps0.trim() //trim spaces at end of string
+      ps0 = ps0.replace(/\n/g, "\ndata:")  //reformat ps to work as sse text  
+    };
     
-    return;
-  }
-    spawnChild()
+    blanc = ""  //clear blanc, so it doesn't stay in memory and get added to blanc next time this runs 
+
+   
+    res.write('data: \ndata:' + ps0 + '\n\n')
+  
+  return;
+}
+  spawnChild()
 return;
 }
 
 
 
 if (req.url === '/f') { // 'e' short for events
-  res.writeHead(200, {
- 'Content-Type': 'text/event-stream',
- 'Cache-Control': 'no-cache',
- 'Connection': 'keep-alive',
-   });
-
-
-async function spawnChild() {
-  var spawn = require("child_process").spawn,child;
-//  console.log(global.cb1 + " for gs2")
-  child = spawn("powershell.exe",["c:\\Intel\\gs2.ps1 " + dompart1]);
-
-   for await (var data of child.stdout) {
-     ps = blanc += data // data to string (when combined with blanc variable)
-     ps = ps.trim() //trim spaces at end of string
-     ps = ps.replace(/\n/g, "\ndata:")  //reformat ps to work as sse text  
-   };
-   
-   blanc = ""  //clear blanc, so it doesn't stay in memory and get added to blanc next time this runs 
-
-   res.write('data: \ndata:' + ps + '\n\n')  
-   res.write('id: -1\ndata: end stream\n\n');
- return;
-}
-spawnChild()
-return;
-}
-
-/*
-if (req.url === '/g') { // 'e' short for events
 res.writeHead(200, {
 'Content-Type': 'text/event-stream',
 'Cache-Control': 'no-cache',
 'Connection': 'keep-alive',
  });
-async function spawnChild() {
-var spawn = require("child_process").spawn,child;
- child = spawn("powershell.exe",["c:\\Intel\\gs.ps1 " + clipboardpart1]);
-
- for await (var data of child.stdout) {
-   ps0 = blanc += data // data to string (when combined with blanc variable)
-   ps0 = ps0.trim() //trim spaces at end of string
-   ps0 = ps0.replace(/\n/g, "\ndata:")  //reformat ps to work as sse text  
- };
- 
- blanc = ""  //clear blanc, so it doesn't stay in memory and get added to blanc next time this runs 
-
- res.write('data: \ndata:' + ps0 + '\n\n') 
- //console.log(psstdout)
- //console.log("/// end bit ///") 
-// res.write('id: -1\ndata: end stream\n\n');
-return;
-}
-spawnChild()
-return;
-}
-
-
-
-if (req.url === '/h') { // 'e' short for events
-res.writeHead(200, {
-'Content-Type': 'text/event-stream',
-'Cache-Control': 'no-cache',
-'Connection': 'keep-alive',
-});
 
 
 async function spawnChild() {
 var spawn = require("child_process").spawn,child;
 //  console.log(global.cb1 + " for gs2")
-child = spawn("powershell.exe",["c:\\Intel\\gs2.ps1 " + clipboardpart1]);
+child = spawn("powershell.exe",["c:\\Intel\\gs2.ps1 " + dompart1]);
 
-for await (var data of child.stdout) {
-ps = blanc += data // data to string (when combined with blanc variable)
-ps = ps.trim() //trim spaces at end of string
-ps = ps.replace(/\n/g, "\ndata:")  //reformat ps to work as sse text  
-};
+ for await (var data of child.stdout) {
+   ps = blanc += data // data to string (when combined with blanc variable)
+   ps = ps.trim() //trim spaces at end of string
+   ps = ps.replace(/\n/g, "\ndata:")  //reformat ps to work as sse text  
+ };
+ 
+ blanc = ""  //clear blanc, so it doesn't stay in memory and get added to blanc next time this runs 
 
-blanc = ""  //clear blanc, so it doesn't stay in memory and get added to blanc next time this runs 
-
-res.write('data: \ndata:' + ps + '\n\n') 
-//console.log(psstdout)
-//console.log("/// end bit ///") 
-res.write('id: -1\ndata: end stream\n\n');
+ res.write('data: \ndata:' + ps + '\n\n')  
+ res.write('id: -1\ndata: end stream\n\n');
 return;
 }
 spawnChild()
 return;
 }
-*/
+
 
 await getPage1()
 
 res.writeHead(200, { 'Content-Type': 'text/html' });
 
-res.end(Page21);
+res.end(Page1);
 });
 
 
