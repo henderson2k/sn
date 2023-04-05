@@ -31,6 +31,7 @@ function main() {
 
 
    
+
     if (url.indexOf('incident.do') > 1) {
 
         x = $('sys_readonly.incident.number');if (x) {casenumber1 = x.value};
