@@ -25,7 +25,7 @@ function main() {
   //      };
   //  } else {
   //      var $ = function(id) {
-   //         return docdocument.getElementById(id);
+ //         return docdocument.getElementById(id);
         };
     }
 
