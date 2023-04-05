@@ -22,8 +22,8 @@ function main() {
         var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
         var $ = function(id) {
             return doc.getElementById(id);
-  /     };
-  //  } else {
+       };
+   } else {
   //      var $ = function(id) {
   //         return docdocument.getElementById(id);
   //      };
