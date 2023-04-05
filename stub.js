@@ -19,7 +19,7 @@ function main() {
 
    //   var mdl = document.getElementsByClassName('modal-body');
   //      var ifrm = document.getElementById('gsft_main')
-        var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
+  //      var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
         var $ = function(id) {
             return doc.getElementById(id);
         };
