@@ -15,7 +15,7 @@ async function getPage1() {
 
 }
 
-async function main() 
+async function main() {}
 await getPage1()
  // Page1 = Page1.replace(/clipbo/g,'hotcombo')
   // console.log(Page1)
