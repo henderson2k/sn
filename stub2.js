@@ -39,7 +39,7 @@ console.log('past url function')
     if (url.indexOf('incident.do') > 1) {
 console.log('in inc oart')
      //   x = $('sys_readonly.incident.number');if (x) {Page1.replace(/casenumber1/g,x.value)};
-     x = $('sys_readonly.incident.number');if (x) {casenumber1,x.value)};
+     x = $('sys_readonly.incident.number');if (x) {casenumber1 = x.value)};
      //console.log("wegotacasenumber")
         x = $('sys_display.incident.caller_id');if (x) {caller1 = x.value};
         x = $('sys_display.incident.location');if (x) {location1 = x.value};
