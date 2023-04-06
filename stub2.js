@@ -7,7 +7,7 @@ var clipbo = ""
 url = window.location.href
 //get the current browser url
 
- main()
+main()
 
 // template 
 async function getPage1() {
