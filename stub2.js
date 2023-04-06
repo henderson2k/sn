@@ -70,6 +70,6 @@ console.log('in inc oart')
 // setTimeout(async()=>{ clipbo = await navigator.clipboard.readText();window.open(hosturl + clipbo + "," + casearray, '_blank')}, 200)
 //setTimeout(async()=> {clipbo = casearray}, 800)
 console.log(Page1);
-  setTimeout(async()=>{ window.open(hosturl + asset1 + "," + casearray, '_blank')}, 500)
+  setTimeout(async()=>{var  window.open(hosturl + asset1 + "," + casearray, '_blank')}, 500)
 }
                                     
