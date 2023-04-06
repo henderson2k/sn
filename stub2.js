@@ -71,5 +71,6 @@ console.log('in inc oart')
 //setTimeout(async()=> {clipbo = casearray}, 800)
 console.log(Page1);
   setTimeout(async()=>{var wnd = window.open(hosturl + asset1 + "," + casearray, '_blank')}, 500)
+
 }
                                     
