@@ -15,7 +15,7 @@ async function getPage1() {
 
 }
 
-async function main() {}
+ async function main() {
 await getPage1()
  // Page1 = Page1.replace(/clipbo/g,'hotcombo')
   // console.log(Page1)
@@ -59,18 +59,18 @@ console.log('in inc oart')
 
     } else {
        console.log("Not an Incident or RITM")
-     //  return;
+     // return;
     }
 
-description1 = description1.replace(/[\n]/g, '<br>'); 
-description1 = description1.replace(/%/g,"PERCENT");   
-description1 = description1.substring(0, 1500);
+//description1 = description1.replace(/[\n]/g, '<br>'); 
+//description1 = description1.replace(/%/g,"PERCENT");   
+//description1 = description1.substring(0, 1500);
 
-      casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + "," + location1 + "," + contactnumber1 + "," + description1
+ //     casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + "," + location1 + "," + contactnumber1 + "," + description1
 
 // setTimeout(async()=>{ clipbo = await navigator.clipboard.readText();window.open(hosturl + clipbo + "," + casearray, '_blank')}, 200)
 //setTimeout(async()=> {clipbo = casearray}, 800)
 console.log(Page1);
   setTimeout(async()=>{ window.open(hosturl + asset1 + "," + casearray, '_blank')}, 500)
 }
-                                    }
+                                    
