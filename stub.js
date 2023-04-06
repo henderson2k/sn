@@ -1,4 +1,4 @@
-var 
+var hosturl
 //var hosturl = 'http://m07092:80/'
 //var hosturl = 'http://10.242.157.70:80/'
 asset1 = ""
