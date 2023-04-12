@@ -1,4 +1,11 @@
+async function getPage1() {
+      const res = await fetch('https://nhsscotland.service-now.com/incident.do?JSONv2&sysparm_action=getRecords&sysparm_query=sys_id=9992fe9f1b8e2994fa6aa822b24bcb7a&displayvariables=true')
+      Page1 = await res.json();
+    
+    console.log(Page1)
+    }
 
+await getPage1()
 
 
 
