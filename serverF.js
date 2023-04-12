@@ -11,7 +11,7 @@ async function getPage1() {
   Page1 = Page1
   .replace(/location1/g,location1)
   .replace(/caseno/g,caseno)
-  .replace(/caseurl/g,)
+  .replace(/caseurl/g,caseurl)
   .replace(/incorritm/g,casetype)
   .replace(/callertel/g,callertel)
   .replace(/caller1/g,caller1)
