@@ -58,3 +58,15 @@ async function getPage1() {
 }
 
 await getPage1();
+
+
+
+
+
+// Find the element with aria-label 'example'
+var element = document.querySelector('[aria-label="Open record: INC0911080"]');
+
+// Change the background color of its parent element
+if (element) {
+  element.parentNode.style.backgroundColor = 'red';
+}
