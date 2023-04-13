@@ -7,7 +7,7 @@ async function getPage1() {
 
 await getPage1()
 
-https://nhsscotland.service-now.com/task_list.do?JSONv2sysparm_clear_stack=true&sysparm_nostack=true&sysparm_query=assigned_to%3Db1daee481be7c4908a04c84b1d4bcbaa%5Eactive%3Dtrue%5EnumberNOT%20LIKEREQ%5Estate!%3D6%5EGROUPBYstate&sysparm_first_row=1&sysparm_view=
+https://nhsscotland.service-now.com/task_list.do?JSONv2&sysparm_clear_stack=true&sysparm_nostack=true&sysparm_query=assigned_to%3Db1daee481be7c4908a04c84b1d4bcbaa%5Eactive%3Dtrue%5EnumberNOT%20LIKEREQ%5Estate!%3D6%5EGROUPBYstate&sysparm_first_row=1&sysparm_view=
 
 Request details
 
