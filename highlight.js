@@ -115,7 +115,7 @@ const data = await response.json();
 return data
 }
 
-let retdata = await fetchData()
+
 
 async function processRecords() { 
 if (retdata.records.length > 0) {
