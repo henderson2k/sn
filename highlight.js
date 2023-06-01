@@ -118,7 +118,7 @@ return data
 
 
 async function processRecords() { 
-    
+    let retdata = await fetchData()
 if (retdata.records.length > 0) {
 for (const record of retdata.records) {
   function addHours(date, hours) {
