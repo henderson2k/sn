@@ -11,9 +11,9 @@ main()
 
 function main() {
 
-    if (url.indexOf('nav_to.do') > 0) {
+  
+console.log(url)  if (url.indexOf('nav_to.do') > 0) {
       console.log('ServiceNow full')
-console.log(url)
    //   var mdl = document.getElementsByClassName('modal-body');
        var ifrm = document.getElementById('gsft_main')
         var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
