@@ -13,7 +13,8 @@ function main() {
 
   
 console.log(url) 
- if (url.indexOf('nav_to.do') > 0) {
+
+if (url.indexOf('nav_to.do') > 0) {
       console.log('ServiceNow full')
    //   var mdl = document.getElementsByClassName('modal-body');
        var ifrm = document.getElementById('gsft_main')
