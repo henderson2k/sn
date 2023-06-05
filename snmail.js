@@ -70,6 +70,8 @@ description1 = description1.substring(0, 1500);
 
 casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + "," + location1 + "," + contactnumber1 + "," + description1
 
+
+
 // setTimeout(async()=>{ clipbo = await navigator.clipboard.readText();window.open(hosturl + clipbo + "," + casearray, '_blank')}, 200)
 //setTimeout(async()=> {clipbo = casearray}, 800)
 window.location.href='mailto:' + eMailto + '?subject=' + eMailsubject + '&body=' + eMailbody
