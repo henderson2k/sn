@@ -77,7 +77,7 @@ casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + ","
 
 var eMailto = 'henderson2k@gmail.com'
 var eMailsubject = casenumber1
-var eMailbody = casea
+var eMailbody = casearray
 
 
 window.location.href='mailto:' + eMailto + '?subject=' + eMailsubject + '&body=' + eMailbody
