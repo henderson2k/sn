@@ -2,7 +2,7 @@
 //var hosturl = 'http://m07092:80/'
 //var hosturl = 'http://10.242.157.70:80/'
 asset1 = ""
-var clipbo = ""
+//var clipbo = ""
 
 url = window.location.href
 //get the current browser url
