@@ -76,7 +76,7 @@ casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + ","
 //setTimeout(async()=> {clipbo = casearray}, 800)
 
 var eMailto = 'henderson2k@gmail.com'
-var eMailsubject = 'cas'
+var eMailsubject = casenumber1
 var eMailbody = 'Body Text'
 
 
