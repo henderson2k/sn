@@ -75,7 +75,9 @@ casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + ","
 // setTimeout(async()=>{ clipbo = await navigator.clipboard.readText();window.open(hosturl + clipbo + "," + casearray, '_blank')}, 200)
 //setTimeout(async()=> {clipbo = casearray}, 800)
 
-
+var eMailto = 'henderson2k@gmail.com'
+// var eMailsubject = 'Subject'
+// var eMailbody = 'Body Text'
 
 
 window.location.href='mailto:' + eMailto + '?subject=' + eMailsubject + '&body=' + eMailbody
