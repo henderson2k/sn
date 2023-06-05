@@ -73,5 +73,5 @@ casearray = "" + asset1 + "," + casenumber1 + "," + sysid1 + "," + caller1 + ","
 // setTimeout(async()=>{ clipbo = await navigator.clipboard.readText();window.open(hosturl + clipbo + "," + casearray, '_blank')}, 200)
 //setTimeout(async()=> {clipbo = casearray}, 800)
 
-  setTimeout(async()=>{window.open(hosturl + asset1 + "," + casearray, '_blank')}, 500)
+ // setTimeout(async()=>{window.open(hosturl + asset1 + "," + casearray, '_blank')}, 500)
 }
