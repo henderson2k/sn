@@ -1,19 +1,22 @@
 url = window.location.href 
 var newArray  =""
 main()//call main function
-
+//$ = ''
 async function main() {
    
 if (url.indexOf('nav_to.do') > 0) { //Inbeded (full) ServiceNow interface   
    //var mdl = document.getElementsByClassName('modal-body');
    var ifrm = document.getElementById('gsft_main')
-   var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;     
+   var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document; 
+  
+ $ = function(id) {
+  return doc.getElementById(id);
+ };
+
 } else {  // Pop-out
- var doc = document
+
 }
       
-
-$ = function(id) {return doc.getElementById(id);};
 
 
  if (url.indexOf('incident.do') > 1) {
@@ -53,10 +56,10 @@ notez2 = notez2.replaceAll(`<div class="sn-card-component_accent-bar sn-card-com
  //<div class="sn-card-component_accent-bar sn-card-component_accent-bar_dark" style="background-color: gold"> 
   notez2 = notez2.replaceAll(`<div class="sn-card-component_accent-bar sn-card-component_accent-bar_dark" style="">`,"~~~DARK~~~")  
 
-  
+  notez2 = notez2.replaceAll('<br>', '~~~BR~~~')
   //sn-card-component-avatar sn-avatar_xs sn-avatar_v2
   var notez3 =  notez2.replaceAll(/<\/?[^>]+(>|$)/g, '');
-
+var notez3 = notez3.replaceAll('~~~BR~~~','<br>')
   //var notez3 = notez3.replaceAll('~~~AVATAR~~~', "~~~AVATAR~~~ >")
   var notez3 = notez3.replaceAll('~~~AVATAR~~~',"")
   var notez3 = notez3.replaceAll('~~~CREATEDBY~~~', "  ")
@@ -120,9 +123,33 @@ const newArray = splitArray.map(array => [...array.slice(0, 4), "~~~note~~~", ..
   let updatedArrays = newArray.map(array => {
   return array.slice(0, 2).concat(array.slice(3));
 });
+//console.log(updatedArrays)
+//let arraystring = updatedArrays.toString();
   
- //console.log(updatedArrays)
-// const newArray2 = newArray.map(array => {
+// console.log(arraystring)
+
+var a2s = updatedArrays.toString().replace(/,/g, '');
+
+a2s = a2s.replaceAll(`Part-[DARK]`,`<br><div style="background-color:WhiteSmoke; padding:10px; border-width: 13px 8px; border-radius: 15px">`)
+a2s = a2s.replaceAll('[DARK]','</b></div>')
+a2s = a2s.replaceAll('~~~note~~~','<BR></BR><b>')
+a2s = a2s.replaceAll(`Part-[GOLD]`,`<br><div style="background-color:LightGoldenrodYellow; padding:10px; border-width: 13px 8px; border-radius: 15px">`)
+a2s = a2s.replaceAll('[GOLD]','</b></div>')
+
+
+
+
+
+  
+  console.log(updatedArrays)
+
+  
+  
+  
+  
+  
+  
+  // const newArray2 = newArray.map(array => {
 //   const firstElement = array[3];
 //   const trimmedFirstElement = firstElement.split(/\d{2}:\d{2}:\d{2}/)[0];
 //   return [trimmedFirstElement.trim(), ...array.slice(1)];
@@ -223,8 +250,8 @@ const newArray = splitArray.map(array => [...array.slice(0, 4), "~~~note~~~", ..
 // var atext = "Hi "
 //   var btext = '<a href="mailto:nhsscotland@service-now.com?subject=Re: caseno&body=Kit collected from IT Store">Kit Collected</a>'
 var atext = caller1
-   var btext = notez3
-   var ctext = '<br>' + btext
+   var btext = a2s
+   var ctext = `<p style="font-family:"Courier New">` + btext + `</p>`
 
 
 // //activity_field_filter_listbox
@@ -298,15 +325,15 @@ var atext = caller1
 
 
  
-//await createtempdiv(ctext)   
-//await copyDivToClipboard()
+await createtempdiv(ctext)   
+await copyDivToClipboard()
 
 
 
       function createtempdiv(x){  
 // create temp div for copy to clipboard content
-const targetElement = doc.getElementById('page_timing_div');
-const newElement = doc.createElement('div');
+const targetElement = $('page_timing_div');
+const newElement = document.createElement('div');
   //newElement.textContent = atext + btext;
    newElement.innerHTML = x
 newElement.setAttribute("id", "enddiv");
@@ -315,15 +342,15 @@ targetElement.appendChild(newElement);
 }
 
       function copyDivToClipboard() {
-         var range = doc.createRange();
-         range.selectNode(doc.getElementById("enddiv"));
-         doc.getSelection().removeAllRanges(); // clear current selection
-         doc.getSelection().addRange(range); // to select text
-         doc.execCommand("copy");
+         var range = document.createRange();
+         range.selectNode(document.getElementById("enddiv"));
+         document.getSelection().removeAllRanges(); // clear current selection
+         document.getSelection().addRange(range); // to select text
+         document.execCommand("copy");
          //window.getSelection().removeAllRanges();// to deselect
-         doc.getElementById("enddiv").style.backgroundColor="red";
+         document.getElementById("enddiv").style.backgroundColor="red";
          //doc.getElementById("enddiv").style.display = "none";
-        doc.getElementById("enddiv").remove();
+        document.getElementById("enddiv").remove();
       }
 
 }
