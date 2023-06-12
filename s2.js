@@ -121,7 +121,7 @@ const newArray = splitArray.map(array => [...array.slice(0, 4), "~~~note~~~", ..
   return array.slice(0, 2).concat(array.slice(3));
 });
   
- console.log(updatedArrays)
+ //console.log(updatedArrays)
 // const newArray2 = newArray.map(array => {
 //   const firstElement = array[3];
 //   const trimmedFirstElement = firstElement.split(/\d{2}:\d{2}:\d{2}/)[0];
