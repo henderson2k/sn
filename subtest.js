@@ -1,8 +1,8 @@
 url = window.location.href
 
- await main()
+main()
 
-async function main() {
+function main() {
 
     if (url.indexOf('nav_to.do') > 0) {
   //   var mdl = document.getElementsByClassName('modal-body');
@@ -45,7 +45,7 @@ async function main() {
     }
 
 
-    console.log(casenumber1)
+    //console.log(casenumber1)
     
 description1 = description1.replace(/[\n]/g, '<br>'); 
 description1 = description1.replace(/%/g,"PERCENT");   
