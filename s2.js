@@ -88,7 +88,7 @@ function splitArrayIntoParts(array, chunkSize) {
 }
   var splitArray = splitArrayIntoParts(array20, 5);  // Split the Array into chunks of 5 elements
 
-//console.log(splitArray);19dd43a7-3573-4ac9-a9f9-b379c815f0d5
+//console.log(splitArray);
 
 
   const partToAdd = splitArray.map((array) => {
