@@ -1,6 +1,6 @@
 
 
-if (value == null) {
+if (accessToken == null) {
     console.log("The value is null.");
 } else {
     console.log("The value is not null.");
