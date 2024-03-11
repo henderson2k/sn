@@ -1,3 +1,5 @@
+
+
 if (value == null) {
     console.log("The value is null.");
 } else {
