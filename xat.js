@@ -1,6 +1,6 @@
 const accessToken = localStorage.getItem('ERG__TOKEN');
 
-if (accessToken.length < === null) {
+if (accessToken.length < 10) {
     const accessToken = sessionStorage.getItem('ERG__TOKEN');
 } else {
 }
