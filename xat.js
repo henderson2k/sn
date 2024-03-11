@@ -4,7 +4,7 @@ if (accessToken === null) {
     const accessToken = sessionStorage.getItem('ERG__TOKEN');
 } else {
 }
-console.log (a)
+console.log (accessToken)
     navigator.clipboard.writeText(accessToken);
     
     //test
