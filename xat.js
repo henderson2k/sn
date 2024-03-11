@@ -1,7 +1,7 @@
 
 
 if (accessToken == null) {
-    console.log("The value is null.");
+    const accessToken = localStorage.getItem('ERG__TOKEN');
 } else {
     console.log("The value is not null.");
 }
