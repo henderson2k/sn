@@ -1,4 +1,4 @@
-
+const accessToken = localStorage.getItem('ERG__TOKEN');
 
 if (accessToken == null) {
     const accessToken = localStorage.getItem('ERG__TOKEN');
