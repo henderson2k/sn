@@ -1,7 +1,7 @@
 const accessToken = localStorage.getItem('ERG__TOKEN');
 
 if (accessToken == null) {
-    const accessToken = localStorage.getItem('ERG__TOKEN');
+    const accessToken = sessionStorage.getItem('ERG__TOKEN');
 } else {
     const accessToken = localStorage.getItem('ERG__TOKEN');
 }
