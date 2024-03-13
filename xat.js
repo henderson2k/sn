@@ -1,11 +1,11 @@
-let accessToken;
-accessToken = sessionStorage.getItem('ERG__TOKEN');
-if (accessToken === null) {
-    accessToken = localStorage.getItem('ERG__TOKEN');
-} else {
-}
+const accessToken = sessionStorage.getItem('ERG__TOKEN') || localStorage.getItem('ERG__TOKEN');
 
-console.log(accessToken);
-navigator.clipboard.writeText(accessToken);
+if (accessToken) {
+    navigator.clipboard.writeText(accessToken)
+        .then(() => console.log('Access token copied to clipboard'))
+        .catch(error => console.error('Error copying access token to clipboard:', error));
+} else {
+    console.error('Access token not found in sessionStorage or localStorage');
+}
 
   
