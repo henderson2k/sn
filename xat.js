@@ -1,5 +1,5 @@
 let accessToken;
-
+accessToken = sessionStorage.getItem('ERG__TOKEN');
 if (accessToken === null) {
     
 } else {
