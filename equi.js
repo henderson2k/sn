@@ -1,4 +1,4 @@
-// run this from Devtools after opening devtools from the equi
+// run this from Devtools after opening devtools from the equitrac site
 
 
 function getCookieValue(name) {
