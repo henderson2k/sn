@@ -1,4 +1,4 @@
-// run this from Devtools after opening de
+// run this from Devtools after opening devtools from the equi
 
 
 function getCookieValue(name) {
