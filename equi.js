@@ -1,4 +1,10 @@
-const accessToken = sessionStorage.getItem('ERG__TOKEN') || localStorage.getItem('ERG__TOKEN');
+const accessToken = sessionStorage.getItem('const accessToken = sessionStorage.getItem('ERG__TOKEN') || localStorage.getItem('ERG__TOKEN');
+
+if (accessToken) {
+    navigator.clipboard.writeText(accessToken) 
+} else {
+    console.error('Access token not found in sessionStorage or localStorage');
+}) || localStorage.getItem('ERG__TOKEN');
 
 if (accessToken) {
     navigator.clipboard.writeText(accessToken) 
