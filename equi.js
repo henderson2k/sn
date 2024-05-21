@@ -1,4 +1,4 @@
-// run this from Devtools after ope
+// run this from Devtools after opening de
 
 
 function getCookieValue(name) {
