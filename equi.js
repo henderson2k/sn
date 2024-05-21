@@ -1,5 +1,4 @@
 const accessToken = sessionStorage.getItem('') || localStorage.getItem('ERG__TOKEN');
-const accessToken = sessionStorage.getItem('') || localStorage.getItem('ERG__TOKEN');
 
 if (accessToken) {
     navigator.clipboard.writeText(accessToken) 
