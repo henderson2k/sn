@@ -1,4 +1,4 @@
-const accessToken = sessionStorage.getItem('XSRF-TOKEN') || localStorage.getItem('ERG__TOKEN');
+const accessToken = sessionStorage.getItem('XSRF-TOKEN') || localStorage.getItem('XSRF-TOKEN');
 
 if (accessToken) {
     navigator.clipboard.writeText(accessToken) 
