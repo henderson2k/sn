@@ -33,7 +33,7 @@
 
 
 
-             alert('Unique matches copied to clipboard!', 1000);
+             //alert('Unique matches copied to clipboard!', 1000);
         }).catch(function(error) {
             console.error('Error copying text: ', error);
             alert('Error copying text. See console for details.');
