@@ -14,7 +14,7 @@
             console.log(allMatches);
 
             const message = document.createElement('div');
-            message.textContent = allmatches;
+            message.textContent = allMatches;
             message.style.position = 'fixed';
             message.style.top = '50%';
             message.style.left = '50%';
