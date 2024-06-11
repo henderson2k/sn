@@ -19,4 +19,3 @@
             alert('Error copying text. See console for details.');
         });
     })();
-}, 5000);
