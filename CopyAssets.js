@@ -12,6 +12,10 @@
         var allMatches = Array.from(matchesSet).join('\n');
         navigator.clipboard.writeText(allMatches).then(function() {
             console.log(allMatches);
+
+
+
+            
              alert('Unique matches copied to clipboard!', 1000);
         }).catch(function(error) {
             console.error('Error copying text: ', error);
