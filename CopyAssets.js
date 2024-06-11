@@ -24,7 +24,7 @@
 setTimeout(() => {
     // Show message for 1 second
     const message = document.createElement('div');
-    message.textContent = all;
+    message.textContent = allmatches;
     message.style.position = 'fixed';
     message.style.top = '50%';
     message.style.left = '50%';
