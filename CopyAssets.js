@@ -20,9 +20,3 @@
     })();
 
 
-    // Wait for 3 seconds
-setTimeout(() => {
-    // Show message for 1 second
-   
-  }, 3000);
-  
