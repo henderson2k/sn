@@ -26,8 +26,7 @@ if (currentUrl == urlToCheck) {
         });
     })();
 } else {
-    console.log("error with url");
-    alert("URL does not match the specified pattern.");
+    showMessage(allMatches);
 }
 
 function showMessage(messageText) {
