@@ -16,8 +16,8 @@
         const message = document.createElement('div');
         message.textContent = 'Hello, world!';
         document.body.appendChild(message);
-        setTimeout(() => message.remove(), 1000);
-        
+      
+
         setTimeout(() => {
             message.remove();
         }, 1000);
