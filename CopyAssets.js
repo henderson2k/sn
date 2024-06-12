@@ -15,7 +15,7 @@
     navigator.clipboard.writeText(allMatches).then(function() {
         const message = document.createElement('div');
 
-        message.textContent = allMa;
+        message.textContent = allMatches;
         message.style.position = 'fixed';
         message.style.top = '50%';
         message.style.left = '50%';
