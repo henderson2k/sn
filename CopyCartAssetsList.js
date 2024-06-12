@@ -26,7 +26,7 @@ if (currentUrl == urlToCheck) {
         });
     })();
 } else {
-    showMessage(allMatches);
+    showMessage("allMatches");
 }
 
 function showMessage(messageText) {
