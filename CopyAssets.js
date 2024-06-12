@@ -48,6 +48,7 @@ if (specifiedURLPattern.test(urlToCheck)) {
     });
 })();
 } else {
+    console.log
     alert = "URL does not match the specified pattern.";
 }
 
