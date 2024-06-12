@@ -23,11 +23,6 @@ if (accessToken) {
    }, 1000);
 
 
-
-
-
-
-
 } else {
     console.error('Access token not found in sessionStorage or localStorage');
 }
