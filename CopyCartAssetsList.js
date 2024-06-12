@@ -26,7 +26,7 @@ if (currentUrl == urlToCheck) {
         });
     })();
 } else {
-    showMessage("Not ");
+    showMessage("Not on Carts");
 }
 
 function showMessage(messageText) {
