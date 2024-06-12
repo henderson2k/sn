@@ -19,7 +19,7 @@
                 message.style.position = 'fixed';
                 message.style.top = '50%';
                 message.style.left = '50%';
-                message.style.transform = 'translate(-50%, -50%)';
+                message.style.transform = 'translate(-50%, -150%)';
                 message.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
                 message.style.color = 'white';
                 message.style.padding = '20px';
