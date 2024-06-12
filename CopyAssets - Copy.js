@@ -13,10 +13,6 @@
         navigator.clipboard.writeText(allMatches).then(function() {
             console.log(allMatches);
 
-           
-        
-            
-            
                 // Show message for 1 second
                 const message = document.createElement('div');
                 message.textContent = allMatches;
