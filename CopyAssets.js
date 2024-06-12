@@ -1,6 +1,7 @@
 const urlToCheck = 'https://stylelink.ergotron.com/app/carts?org=354';
 
-// Check if the URL matches the specified pattern
+var currentUrl = window.location.href;
+console.log(currentUrl);
 if (specifiedURLPattern.test(urlToCheck)) {
    
 (function() {
