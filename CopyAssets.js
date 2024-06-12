@@ -14,7 +14,7 @@
     
     navigator.clipboard.writeText(allMatches).then(function() {
         const message = document.createElement('div');
-        const message = document.createElement('div');
+
         message.textContent = 'Hello, world!';
         message.style.position = 'fixed';
         message.style.top = '50%';
