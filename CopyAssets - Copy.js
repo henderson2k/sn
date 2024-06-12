@@ -17,7 +17,7 @@
             setTimeout(() => {
                 // Show message for 1 second
                 const message = document.createElement('div');
-                message.textContent = 'Hello, world!';
+                message.textContent = a;
                 message.style.position = 'fixed';
                 message.style.top = '50%';
                 message.style.left = '50%';
