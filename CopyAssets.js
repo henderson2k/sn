@@ -17,7 +17,7 @@
         const msg = document.body.appendChild(document.createElement('div'));
 
 // Show message for 1 second
-const message = document.createElement('div');
+//const message = document.createElement('div');
 message.textContent = allMatches;
 message.style.position = 'fixed';
 message.style.top = '50%';
