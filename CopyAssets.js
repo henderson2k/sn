@@ -34,6 +34,7 @@ setTimeout(() => {
   // Remove message after 1 second
   message.remove();
 }, 1000);
+
     }).catch(function(error) {
         console.error('Error copying text: ', error);
         alert('Error copying text. See console for details.');
