@@ -5,7 +5,7 @@ if (accessToken) {
 
    // Show message for 1 second
    const message = document.createElement('div');
-   message.textContent = allMatches;
+   message.textContent = accessToken;
    message.style.position = 'fixed';
    message.style.top = '50%';
    message.style.left = '50%';
