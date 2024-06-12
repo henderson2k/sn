@@ -13,11 +13,10 @@
     var allMatches = Array.from(matchesSet).join('\n');
     
     navigator.clipboard.writeText(allMatches).then(function() {
-        console.log(allMatches);
         const message = document.createElement('div');
-        message.textContent = allMatches;
+        message.textContent = 'Hello, world!';
         document.body.appendChild(message);
-        
+        setTimeout(() => message.remove(), 1000);
         setTimeout(() => {
             message.remove();
         }, 1000);
