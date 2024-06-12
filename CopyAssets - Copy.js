@@ -14,7 +14,9 @@
             console.log(allMatches);
 
            
-            setTimeout(() => {
+        
+            
+            
                 // Show message for 1 second
                 const message = document.createElement('div');
                 message.textContent = allMatches;
