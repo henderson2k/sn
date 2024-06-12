@@ -14,7 +14,7 @@
     
     navigator.clipboard.writeText(allMatches).then(function() {
         const message = document.createElement('div');
-        message.textContent = allMatches';
+        message.textContent = allMatches;
         document.body.appendChild(message);
       
 
